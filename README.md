@@ -66,7 +66,7 @@ pip install -r requirements.txt
 ### 3. Load data
 
 Use the provided shell script to download both JSON and CSV versions of national and state-level data into `data/raw/`.
-This will Download current and historical datasets for the US and all states, save them as `.json` and `.csv` files.
+This will download current and historical datasets for the US and all states.
 
 ```bash
 bash src/fetch_covid_data.sh
