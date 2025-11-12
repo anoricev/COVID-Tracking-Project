@@ -72,9 +72,15 @@ This will download current and historical datasets for the US and all states.
 bash src/fetch_covid_data.sh
 ```
 
+After downloading the raw data, run the cleaning script to save the processed data to `data/processed`.
+
+```bash
+python src/clean_data.py
+```
+
 ### 4. Build a SQLite database (under construction)
 
-Once the raw files are downloaded, you can compile them into a structured database in `data`.
+You can compile the cleaned data into a structured database in `data`.
 
 ```bash
 python src/build_database.py
