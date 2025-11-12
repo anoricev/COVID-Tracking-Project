@@ -10,3 +10,6 @@ data/*
 *.csv
 *.json
 !data/.gitkeep
+
+# Python cache
+__pycache__
