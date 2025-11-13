@@ -1,15 +1,12 @@
-# virtual environments
 .venv/
 venv/
-
-# OS files
+.env
+airflow/logs
+airflow/plugins/
 .DS_Store
-
-# data files
 data/*
 *.csv
 *.json
+*.db
 !data/.gitkeep
-
-# Python cache
 __pycache__
