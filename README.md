@@ -21,8 +21,7 @@ COVID-Tracking-Project/
 │   ├── fetch_covid_data.sh
 │   ├── build_database.py
 │   ├── clean_data.py
-│   ├── aggregate_metrics.py
-│   ├── utils.py
+│   ├── app.py
 │   └── ...
 │
 ├── notebooks/
@@ -72,10 +71,17 @@ This will download current and historical datasets for the US and all states.
 bash src/fetch_covid_data.sh
 ```
 
-### 4. Build a SQLite database (under construction)
-
-Once the raw files are downloaded, you can compile them into a structured database in `data`.
+After downloading the raw data, run the cleaning script to save the processed data to `data/processed`.
+You can also compile the cleaned data into a structured database in `data`.
 
 ```bash
+python src/clean_data.py
 python src/build_database.py
+```
+
+## Usage 
+
+```bash
+# Launch Shiny App
+shiny run src/app.py
 ```

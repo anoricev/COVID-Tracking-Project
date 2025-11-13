@@ -6,7 +6,10 @@ venv/
 .DS_Store
 
 # data files
-data/raw/
+data/*
 *.csv
 *.json
 !data/.gitkeep
+
+# Python cache
+__pycache__
