@@ -65,7 +65,7 @@ cd COVID-Tracking-Project
 
 ```bash
 # Create a virtual environment
-python3 -m venv venv
+python3.11 -m venv venv
 
 # On macOS/Linux:
 source venv/bin/activate
