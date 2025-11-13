@@ -29,6 +29,7 @@ These notebooks assume that:
 - Your Python environment is already set up
 - Raw data has been fetched 
 - Cleaned data is available in `data/processed/`  
+
 Note: If you have followed the instructions in the main project `README.md`, you are ready to run any notebook in this folder.
 
 ### Running the Notebooks
