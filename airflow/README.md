@@ -4,7 +4,6 @@ This folder contains a containerized Apache Airflow setup that orchestrates the 
 
 > **Note:** Airflow does not support Python 3.12+.  
 > This project uses **Python 3.11** in the main environment to ensure compatibility with Airflow and its dependencies.  
-> The container also run Python 3.11 internally.  
 
 ## Start the stack
 
