@@ -2,11 +2,11 @@
 
 This is the final project for MLDS-400: Topics in Data Engineering at Northwestern University. The project reproduces and extends the workflow of The COVID Tracking Project by building an automated data pipeline that fetches, stores, and explores COVID-19 case data across US states and the nation.
 
-The project is implemented in Python and Shell scripting, featuring modular components for data ingestion, processing, and visualization, along with a Shiny for Python app for interactive exploration of state-level trends.
+The project is implemented in Python and Shell scripting, featuring modular components for data ingestion, processing, and visualization, along with a Shiny for Python app for interactive exploration of state-level trends. The workflow is origanized using a Dockerized Apache Airflow stack, which provides automated scheduling of the full data pipeline.
 
 ## Repository Structure (subject to change)
 
-```
+```bash
 COVID-Tracking-Project/
 ├── .gitignore
 ├── README.md
@@ -20,11 +20,9 @@ COVID-Tracking-Project/
 │   ├── docker-compose.yml
 │   └── requirements.txt
 │
-├── data/
+├── data/                                   # ignored
 │   ├── raw/
-│   │    └── .gitkeep
 │   ├── processed/
-│   │    └── .gitkeep
 │   └── covid.db
 │
 ├── src/
@@ -65,7 +63,7 @@ cd COVID-Tracking-Project
 
 ```bash
 # Create a virtual environment
-python3 -m venv venv
+python3.11 -m venv venv
 
 # On macOS/Linux:
 source venv/bin/activate
@@ -95,9 +93,11 @@ python src/build_database.py
 
 ## Files & Usage 
 
-- `notebooks/`: Jupyter analysis notebooks
-- `scripts/`: Data processing scripts
-- `app.py`: Shiny App
+- `notebooks/`: Jupyter notebooks for exploration, checks, and analysis
+- `reports/`: Exported figures and summary tables
+- `src/`: Data processing scripts
+- `airflow/`: Dockerized Airflow setup for automated pipeline scheduling
+- `app.py`: Shiny App for interactive data exploration
 
 ```bash
 # Launch Shiny App
