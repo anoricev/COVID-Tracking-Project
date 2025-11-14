@@ -34,14 +34,16 @@ app_ui = ui.page_fluid(
         ui.nav_panel("State Deep-Dive",
             ui.layout_sidebar(
                 ui.sidebar(
-                    ui.input_select("state_select", "Select State:", all_states, selected="IL"),
-                    ui.input_select("metric_select", "Select Metric:", list(metrics_map.keys()), selected="positiveIncrease_7day_avg"),
-                    ui.input_date_range("date_range", "Date Range:", 
-                                      start=min_date,
-                                      end=max_date,
-                                      min=min_date,
-                                      max=max_date
-                                     )
+                    ui.div(
+                        ui.input_select("state_select", "Select State:", all_states, selected="IL"),
+                        ui.input_select("metric_select", "Select Metric:", list(metrics_map.keys()), selected="positiveIncrease_7day_avg"),
+                        ui.input_date_range("date_range", "Date Range:", 
+                                            start=min_date, end=max_date,
+                                            min=min_date, max=max_date
+                                            ), 
+                    style="width: 230px;"
+                    ), 
+                    width="300px"
                 ),
                 ui.layout_columns(
                     ui.value_box("Total Cases", ui.output_text("val_total_cases")),
@@ -58,15 +60,19 @@ app_ui = ui.page_fluid(
         ui.nav_panel("State Comparison",
             ui.layout_sidebar(
                 ui.sidebar(
-                    ui.input_selectize("compare_states", "Select States to Compare:", 
-                                     all_states, selected=["NY", "CA", "IL"], multiple=True),
-                    ui.input_select("compare_metric", "Metric to Compare:", list(metrics_map.keys()), selected="positiveIncrease_7day_avg"),
-                    ui.input_date_range("compare_date_range", "Date Range:", 
-                                      start=min_date,
-                                      end=max_date,
-                                      min=min_date, 
-                                      max=max_date
-                                     )
+                    ui.div(
+                        ui.input_selectize("compare_states", "Select States to Compare:", 
+                                        all_states, selected=["NY", "CA", "IL"], multiple=True),
+                        ui.input_select("compare_metric", "Metric to Compare:", list(metrics_map.keys()), selected="positiveIncrease_7day_avg"),
+                        ui.input_date_range("compare_date_range", "Date Range:", 
+                                        start=min_date,
+                                        end=max_date,
+                                        min=min_date, 
+                                        max=max_date
+                                        ),
+                        style="width: 230px;"
+                    ), 
+                    width="300px"
                 ),
                 ui.card(
                     ui.output_plot("comparison_plot")
