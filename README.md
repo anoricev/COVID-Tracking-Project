@@ -62,16 +62,19 @@ cd COVID-Tracking-Project
 ### 2. Set up the environment
 
 ```bash
+# This project require python version > 3.11
+uv python install 3.11
+
 # Create a virtual environment
-python3.11 -m venv venv
+uv venv -p 3.11 .venv
 
 # On macOS/Linux:
-source venv/bin/activate
+source .venv/bin/activate
 # On Windows:
 # .\venv\Scripts\activate       
 
 # Install required packages
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
 ### 3. Load data

@@ -17,8 +17,8 @@ This folder contains the main exploratory and analytical notebooks for the COVID
 - **Key Features:** 
 
 4. **[04_state_level_analysis.ipynb](04_state_level_analysis.ipynb)**
-- **Purpose:** 
-- **Key Features:** 
+- **Purpose:** Find some patterns between the state level data.
+- **Key Features:** Query data and use data visulization tools to figure out insights.
 
 
 ## Getting Started
