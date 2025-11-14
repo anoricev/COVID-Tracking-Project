@@ -13,8 +13,8 @@ This folder contains the main exploratory and analytical notebooks for the COVID
 - **Key Features:** Confirms formatting and checks transformations.
 
 3. **[03_national_trends.ipynb](03_national_trends.ipynb)**
-- **Purpose:** 
-- **Key Features:** 
+- **Purpose:** Find several insights in the national level data (positive rate, etc.)
+- **Key Features:** Query data and use data visulization tools to figure out insights.
 
 4. **[04_state_level_analysis.ipynb](04_state_level_analysis.ipynb)**
 - **Purpose:** Find some patterns between the state level data.
