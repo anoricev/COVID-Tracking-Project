@@ -11,6 +11,7 @@ COVID-Tracking-Project/
 ├── .gitignore
 ├── README.md
 ├── requirements.txt
+├── app.py
 │
 ├── airflow
 │   ├── README.md
@@ -28,17 +29,14 @@ COVID-Tracking-Project/
 ├── src/
 │   ├── fetch_covid_data.sh
 │   ├── clean_data.py
-│   ├── build_database.py
-│   ├── app.py
-│   └── ...
+│   └── build_database.py
 │
 ├── notebooks/
 │   ├── README.md
 │   ├── 01_raw_data_exploration.ipynb
 │   ├── 02_cleaning_checks.ipynb
 │   ├── 03_national_trends.ipynb
-│   ├── 04_state_level_analysis.ipynb
-│   └── ...
+│   └── 04_state_level_analysis.ipynb
 │
 └── reports/
     ├── README.md
