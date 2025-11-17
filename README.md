@@ -100,9 +100,4 @@ python src/build_database.py
 - `reports/`: Exported figures and summary tables
 - `src/`: Data processing scripts
 - `airflow/`: Dockerized Airflow setup for automated pipeline scheduling
-- `app.py`: Shiny App for interactive data exploration
-
-```bash
-# Launch Shiny App
-shiny run src/app.py
-```
+- `app.py`: Shiny App for interactive data exploration ([**View Dashboard**](https://veronica-lin.shinyapps.io/covid-19-dashboard/))
