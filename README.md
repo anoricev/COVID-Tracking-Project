@@ -94,8 +94,8 @@ python src/build_database.py
 
 ## Files & Usage 
 
-- `notebooks/`: Jupyter notebooks for exploration, checks, and analysis
-- `reports/`: Exported figures and summary tables
 - `src/`: Data processing scripts
 - `airflow/`: Dockerized Airflow setup for automated pipeline scheduling
+- `notebooks/`: Jupyter notebooks for exploration, checks, and analysis ([**View Notebooks**](https://github.com/anoricev/COVID-Tracking-Project/tree/main/notebooks#readme))
+- `reports/`: Exported figures and summary tables ([**View Reports**](https://github.com/anoricev/COVID-Tracking-Project/tree/main/reports))
 - `app.py`: Shiny App for interactive data exploration ([**View Dashboard**](https://veronica-lin.shinyapps.io/covid-19-dashboard/))
