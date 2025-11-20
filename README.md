@@ -39,12 +39,6 @@ COVID-Tracking-Project/
 │   └── 04_state_level_analysis.ipynb
 │
 └── reports/
-    ├── README.md
-    ├── figures/ 
-    │   └── ...
-    ├── tables/
-    │   └── ...
-    └── final_presentation.pptx
 
 ```
 
@@ -95,7 +89,7 @@ python src/build_database.py
 ## Files & Usage 
 
 - `src/`: Data processing scripts
-- `airflow/`: Dockerized Airflow setup for automated pipeline scheduling
+- `airflow/`: Dockerized Airflow setup for automated pipeline scheduling ([**View Airflow Instructions**](https://github.com/anoricev/COVID-Tracking-Project/tree/main/airflow#readme))
 - `notebooks/`: Jupyter notebooks for exploration, checks, and analysis ([**View Notebooks**](https://github.com/anoricev/COVID-Tracking-Project/tree/main/notebooks#readme))
 - `reports/`: Exported figures and summary tables ([**View Reports**](https://github.com/anoricev/COVID-Tracking-Project/tree/main/reports))
 - `app.py`: Shiny App for interactive data exploration ([**View Dashboard**](https://veronica-lin.shinyapps.io/covid-19-dashboard/))
