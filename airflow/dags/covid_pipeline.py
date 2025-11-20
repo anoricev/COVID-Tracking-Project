@@ -1,6 +1,7 @@
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.bash import BashOperator
+from airflow.operators.empty import EmptyOperator
 import os
 
 PROJECT_DIR = os.environ.get("COVID_PROJECT_DIR", "/opt/airflow/COVID-Tracking-Project")
@@ -26,6 +27,16 @@ with DAG(
         bash_command=f"cd {PROJECT_DIR} && {VENV_ACT} && python src/clean_data.py --raw-dir data/raw --out-dir data/processed",
     )
 
+    # dummy operator for notebook analysis
+    National_Level_Analysis = EmptyOperator(
+        task_id="National_Level_Analysis",
+    )
+
+    # dummy operator for notebook analysis
+    State_Level_Analysis = EmptyOperator(
+        task_id="State_Level_Analysis",
+    )
+
     # Run shiny app
     run_shiny = BashOperator(
         task_id="run_shiny_app",
@@ -33,4 +44,4 @@ with DAG(
         trigger_rule="all_done",
     )
 
-    fetch_data >> clean_data >> run_shiny
+    fetch_data >> clean_data >> National_Level_Analysis >> State_Level_Analysis >>run_shiny
