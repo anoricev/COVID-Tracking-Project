@@ -10,3 +10,4 @@ data/*
 *.db
 !data/.gitkeep
 __pycache__
+rsconnect-python/
